@@ -1,15 +1,15 @@
 <template>
-  <div class="container">
+  <v-container class="pa-0 ma-0" style="max-width: 1500px">
     <header-component />
     <popular-products-component />
     <footer-component />
-  </div>
+  </v-container>
 </template>
 
 <script>
-const Header = require('../components/Header.vue')
-const PopularProducts = require('../components/PopularProducts.vue')
-const Footer = require('../components/Footer.vue')
+import Header from '../components/Header.vue'
+import PopularProducts from '../components/PopularProducts.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   components: {
