@@ -7,10 +7,11 @@
       <v-col cols="7">
         <v-card-title>{{ product.title }}</v-card-title>
         <v-card-text>${{ product.price.toString() }}</v-card-text>
+        <v-card-text> Quantity: {{ product.inCart }} </v-card-text>
         <v-card-actions>
-          <v-btn @click="actAddProduct(product.id)" color="success">
-            <v-icon left>mdi-plus</v-icon>
-            Add to cart
+          <v-btn @click="actRemoveProduct(product.id)" color="success">
+            <v-icon left>mdi-minus</v-icon>
+            Remove from cart
           </v-btn>
         </v-card-actions>
       </v-col>
@@ -28,7 +29,7 @@ export default {
     },
   },
   methods: {
-    ...mapActions(['actAddProduct']),
+    ...mapActions(['actRemoveProduct']),
   },
 }
 </script>

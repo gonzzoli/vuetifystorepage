@@ -4,7 +4,7 @@
     <nuxt />
     <v-snackbar
       v-model="$store.state.snackbar.show"
-      :timeout="4000"
+      :timeout="1500"
       :top="true"
       :right="true"
       :color="$store.state.snackbar.variant"

@@ -4,7 +4,7 @@
     <v-card-title>{{ product.title }}</v-card-title>
     <v-card-text>${{ product.price.toString() }}</v-card-text>
     <v-card-actions>
-      <v-btn color="success" @click="actAddProduct(product)">
+      <v-btn color="success" @click="actAddProduct(product.id)">
         <v-icon left>mdi-plus</v-icon>
         Add to cart
       </v-btn>
@@ -19,14 +19,6 @@ export default {
   props: {
     product: {
       type: Object,
-      default: () => {
-        return {
-          id: 1001,
-          title: 'Product One',
-          price: 142,
-          image: '/coffee.jpg',
-        }
-      },
     },
   },
   methods: {
